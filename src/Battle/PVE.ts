@@ -18,7 +18,7 @@ export default class PVE extends Battle {
     const player1 = this._player1;
     const monsters = this._monsters;
     monsters.forEach((monster) => {
-      if (player1.lifePoints > 0 && monsters
+      while (player1.lifePoints > 0 && monsters
         .some((beast) => beast.lifePoints > 0)) {
         monster.receiveDamage(player1.strength);
         player1.receiveDamage(monster.strength);
